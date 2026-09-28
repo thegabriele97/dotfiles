@@ -1,0 +1,19 @@
+
+layer-rule {
+    match namespace="^dms:bar$"
+    match namespace="^dms:dock$"
+
+    background-effect {
+        blur false
+        xray false
+    }
+
+    popups {
+        background-effect {
+            blur true
+            xray true
+        }
+
+    }
+}
+
