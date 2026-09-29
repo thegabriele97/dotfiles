@@ -28,10 +28,6 @@ window-rule {
 // Calculator apps open as floating by default, since they usually have a small window that doesn't need tiling.
 window-rule {
     match app-id=r#"[cC]alculator$"#
-    open-floating true
-}
-
-window-rule {
     match app-id=r#"org.quickshell$"#
     open-floating true
 }
@@ -73,7 +69,6 @@ window-rule {
     match title=r#"GTKWave"#
     match app-id=r#"Loupe"#
     match app-id=r#"zen$"#
-    match app-id=r#"VirtualLCD"#
     match app-id=r#"vlc"#
     opacity 1.0
 }
@@ -85,6 +80,7 @@ blur {
     saturation 1.5
 }
 
+include optional=true "window_rules_local.kdl"
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)

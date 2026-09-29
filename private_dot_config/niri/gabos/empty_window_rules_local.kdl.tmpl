@@ -1,0 +1,15 @@
+// Window rules per-macchina. Generato da chezmoi — modifica i rami, non il file in ~.
+
+{{- if eq .chezmoi.hostname "PC-LAGRECA" }}
+// --- WORK (PC-LAGRECA) ---
+
+window-rule {
+    match app-id=r#"VirtualLCD"#
+    opacity 1.0
+}
+
+{{- else }}
+// --- HOME ---
+
+{{- end }}
+
