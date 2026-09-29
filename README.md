@@ -52,7 +52,9 @@ files or need to be installed. Do this on every fresh machine (things I forget):
    resolve. Without it niri and kitty still start, just without the dank theme.
 4. **CLI deps used by my fish functions** — install so `cat`/`ff`/greeting work:
    `bat` (batcat), `fastfetch`, `eza`, `lolcat`, `fzf`.
-5. **vim plugins** — TODO: document plugin-manager step once vim is set up.
+5. **Neovim / AstroNvim** — `~/.config/nvim` is tracked (incl. `lazy-lock.json`).
+   Just open `nvim`: lazy.nvim installs the plugins pinned in the lockfile and
+   Mason installs the LSPs/tools. Nothing else to do.
 
 ## Daily workflow
 
@@ -135,6 +137,7 @@ Anything an app regenerates or that is machine-specific stays out of chezmoi
 | `~/.config/kitty/dank-*.conf` | DankMaterialShell theme generator |
 | `~/.config/fish/{functions,completions,conf.d}` (plugin files) | `fisher update` from `fish_plugins` |
 | `~/.config/fish/fish_variables` | fish runtime state (universal variables) |
+| `~/.local/share/nvim`, `~/.local/state/nvim` | Neovim plugins/state — lazy.nvim + Mason from `lazy-lock.json` |
 | `~/.config/chezmoi/chezmoi.toml` | chezmoi's own per-machine config |
 
 Only my 3 hand-written fish functions (`cat`, `ff`, `fish_greeting`) are tracked
